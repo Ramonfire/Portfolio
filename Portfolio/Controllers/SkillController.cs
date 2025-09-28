@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Potfolio.Project.Data;
 using Potfolio.Project.Models;
 
@@ -23,7 +24,10 @@ namespace Portfolio.Controllers
         [HttpGet("{id}")]
         public IActionResult GetById(uint id)
         {
-            var item = context.Skills.Find(id);
+            var item = context.Skills
+            .Include(s => s.Category)
+            .FirstOrDefault(s => s.Id == id);
+
             if (item == null) return NotFound();
             return Ok(item);
         }

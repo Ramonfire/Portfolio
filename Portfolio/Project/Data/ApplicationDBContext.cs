@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Potfolio.Project.Models;
+using System.Reflection.Emit;
 
 namespace Potfolio.Project.Data
 {
@@ -7,6 +8,7 @@ namespace Potfolio.Project.Data
     {
         public ApplicationDBContext(DbContextOptions dbContextOptions) : base(dbContextOptions)
         {
+            
         }
         public DbSet<Profile> Profiles { get; set; }
         public DbSet<Education> Educations { get; set; }
@@ -15,6 +17,8 @@ namespace Potfolio.Project.Data
         public DbSet<SkillCategory> SkillCategories { get; set; }
         public DbSet<Skill> Skills { get; set; }
         public DbSet<MasteredLanguage> MasteredLanguages { get; set; }
+      
+    }  
 
-    }
+    
 }

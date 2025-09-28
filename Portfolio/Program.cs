@@ -1,17 +1,20 @@
 using Microsoft.EntityFrameworkCore;
 using Potfolio.Project.Data;
 
-var builder = WebApplication.CreateBuilder(args);
+
+var builder = WebApplication.CreateBuilder(new WebApplicationOptions
+{
+    Args = args,
+    WebRootPath = "FrontEnd" // Set FrontEnd as the web root
+});
 
 // Add services to the container.
-
-builder.Services.AddDbContext<ApplicationDBContext>(options => 
+builder.Services.AddDbContext<ApplicationDBContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -23,6 +26,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+// Serve index.html at root
+app.UseDefaultFiles(); // Looks for index.html by default
+app.UseStaticFiles();  // Serves static files from FrontEnd
 
 app.UseHttpsRedirection();
 
