@@ -1,0 +1,31 @@
+using Microsoft.AspNetCore.Mvc;
+using Potfolio.Project.Data;
+using Potfolio.Project.Models;
+
+namespace Portfolio.Controllers
+{
+    [ApiController]
+    [Route("omarZaida/projects")]
+    public class ProjectsController : ControllerBase
+    {
+        private readonly ApplicationDBContext context;
+        public ProjectsController(ApplicationDBContext inContext)
+        {
+            context = inContext;
+        }
+
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            return Ok(context.Projects.ToList());
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult GetById(uint id)
+        {
+            var item = context.Projects.Find(id);
+            if (item == null) return NotFound();
+            return Ok(item);
+        }
+    }
+}
