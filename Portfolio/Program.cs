@@ -1,11 +1,12 @@
 using Microsoft.EntityFrameworkCore;
+using Portfolio.Project.Repositories.impl;
+using Portfolio.Project.Repositories.Interfaces;
 using Potfolio.Project.Data;
 
 
 var builder = WebApplication.CreateBuilder(new WebApplicationOptions
 {
     Args = args,
-    WebRootPath = "FrontEnd" // Set FrontEnd as the web root
 });
 
 // Add services to the container.
@@ -17,6 +18,13 @@ builder.Services.AddDbContext<ApplicationDBContext>(options =>
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddScoped<IEducationRepository, EducationRepository>();
+builder.Services.AddScoped<IWorkExperienceRepository, WorkExperienceRepository>();
+builder.Services.AddScoped<ISkillRepository, SkillRepository>();
+builder.Services.AddScoped<IProfileRepository, ProfileRepository>();
+builder.Services.AddScoped<IProjectsRepository, ProjectRepository>();
+builder.Services.AddScoped<IMasteredLanguageRepository, MasteredLanguagesRepository>();
 
 var app = builder.Build();
 

@@ -8,6 +8,28 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\work.html" />
+    <Content Remove="wwwroot\work.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\work.js" />
+    <None Include="wwwroot\work.html" />
+    <None Include="wwwroot\education.html" />
+    <None Include="wwwroot\education.js" />
+    <None Include="wwwroot\index.html" />
+    <None Include="wwwroot\languages.html" />
+    <None Include="wwwroot\languages.js" />
+    <None Include="wwwroot\me.png" />
+    <None Include="wwwroot\profile.js" />
+    <None Include="wwwroot\projects.html" />
+    <None Include="wwwroot\projects.js" />
+    <None Include="wwwroot\skills.html" />
+    <None Include="wwwroot\skills.js" />
+    <None Include="wwwroot\styles.css" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.9">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -18,6 +40,10 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\" />
   </ItemGroup>
 
 </Project>
