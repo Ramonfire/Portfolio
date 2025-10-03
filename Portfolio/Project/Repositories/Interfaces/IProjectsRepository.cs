@@ -6,5 +6,6 @@ namespace Portfolio.Project.Repositories.Interfaces
     {
         Task<List<Projects>> GetAllAsynch();
         Projects GetById(uint id);
+        Task<List<Projects>> GetHighlights();
     }
 }

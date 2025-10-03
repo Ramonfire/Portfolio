@@ -25,7 +25,7 @@ namespace Portfolio.Project.Controllers
             return Ok(WorkExp);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id:int}")]
         public IActionResult GetById(uint id)
         {
             var item = repo.GetById(id);

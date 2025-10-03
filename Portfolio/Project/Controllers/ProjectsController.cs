@@ -23,8 +23,14 @@ namespace Portfolio.Project.Controllers
         {
             return Ok(await repo.GetAllAsynch());
         }
+        [HttpGet("highlight")]
+        public async Task<IActionResult> GetHighlights()
+        {
 
-        [HttpGet("{id}")]
+            return Ok(await repo.GetHighlights());
+        }
+
+        [HttpGet("{id:int}")]
         public IActionResult GetById(uint id)
         {
             var item = repo.GetById(id);

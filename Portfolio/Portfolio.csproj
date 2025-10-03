@@ -8,11 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\index.js" />
+    <Content Remove="wwwroot\profile.html" />
     <Content Remove="wwwroot\work.html" />
     <Content Remove="wwwroot\work.js" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\profile.html" />
+    <None Include="wwwroot\index.js" />
     <None Include="wwwroot\work.js" />
     <None Include="wwwroot\work.html" />
     <None Include="wwwroot\education.html" />

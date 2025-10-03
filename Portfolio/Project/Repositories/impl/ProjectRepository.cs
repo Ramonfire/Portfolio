@@ -21,5 +21,10 @@ namespace Portfolio.Project.Repositories.impl
         {
             return context.Projects.Find(id);
         }
+
+        public Task<List<Projects>> GetHighlights()
+        {
+            return context.Projects.Where((p)=>p.IsHighLight).ToListAsync();
+        }
     }
 }

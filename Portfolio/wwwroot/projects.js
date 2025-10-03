@@ -7,9 +7,10 @@ fetch('/omarZaida/projects')
             return;
         }
         let html = '<div class="row">';
+        console.log(data)
         data.forEach(proj => {
             // Use correct property names from your model
-            const { Id, name, link } = proj;
+            const { Id, name, link, isHighlight } = proj;
 
             // Regex to match all https links ending with | or end of string
             const linkRegex = /(https[^\|]+)\|?/g;

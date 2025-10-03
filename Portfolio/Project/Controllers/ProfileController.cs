@@ -24,7 +24,7 @@ namespace Portfolio.Project.Controllers
             return Ok(profile);
         }
 
-        [HttpGet ("{id}")]
+        [HttpGet ("{id:int}")]
         public IActionResult GetProfile([FromRoute]uint id) 
         {
             var profile = repo.GetById(id);
