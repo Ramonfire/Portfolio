@@ -1,35 +1,16 @@
-Portfolio
+# Heading 1 Portfolio
 
 A portfolio website built using C# and .NET.
 This project is working locally, but not yet deployed to a public URL.
 
-Table of Contents
 
-Overview
-
-Features
-
-Tech Stack
-
-Getting Started
-
-Usage
-
-Project Structure
-
-Future Improvements
-
-Contributing
-
-License
-
-Overview
+# Heading 1 Overview
 
 This repository contains a portfolio website built with C# and the .NET framework (or .NET Core/ASP.NET — adjust accordingly).
 It’s intended to showcase personal/projects work in a clean, responsive way.
 Although it’s fully functional when run locally, it hasn't yet been deployed to a live server.
 
-Features
+# Heading 1 Features
 
 Home / About section — introduction and background.
 
@@ -43,7 +24,7 @@ Clean modern UI using HTML, CSS (and possibly JavaScript) plus back-end C# logic
 
 Easy to expand/add new projects or pages.
 
-Tech Stack
+# Heading 1 Tech Stack
 
 C#
 
@@ -57,8 +38,8 @@ JavaScript (for any UI enhancements)
 
 (Optional) Use of MVC architecture or Razor Pages (adjust if applicable)
 
-Getting Started
-Prerequisites
+# Heading 1 Getting Started
+# Heading 2 Prerequisites
 
 .NET SDK
  installed on your machine.
@@ -67,7 +48,7 @@ A code editor (e.g., Visual Studio, Visual Studio Code).
 
 (Optional) Node/npm if you have front-end build tools.
 
-Installation
+# Heading 2 Installation
 
 Clone the repository:
 
